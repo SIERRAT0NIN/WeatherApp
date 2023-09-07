@@ -1,6 +1,8 @@
+// API documentation
 const apiKey = "b6ba3ed28ec0a2ed6183145e16564d56";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
+
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
@@ -34,7 +36,7 @@ async function checkWeather(city) {
     document.querySelector(".error").style.display = "none";
   }
 }
-checkWeather();
+
 searchBtn.addEventListener("click", () => {
   checkWeather(searchBox.value);
 });
